@@ -21,24 +21,28 @@
 ##############################################################################
 
 {
-    "name" : "Web Digital Signature",
-    "version" : "1.0",
-    "author" : "Serpent Consulting Services Pvt. Ltd.",
-    "category": '',
-    'complexity': "easy",
-    'depends': ['web'],
-    "description": """
-        This module provides the functionality to store digital signature image for a record.
-        The example can be seen into the User's form view where we have added a test field under signature.
-    """,
-    'data': [
-        'views/we_digital_sign_view.xml',
-        'users_view.xml'
-    ],
-    'website': 'http://www.serpentcs.com',
-    'qweb': ['static/src/xml/digital_sign.xml'],
-    'installable': True,
-    'auto_install': False,
+	"name" : "Web Digital Signature",
+	"version" : "1.0",
+	"author" : "Serpent Consulting Services Pvt. Ltd.",
+	"category": '',
+	'depends': ['web'],
+	"description": """
+		This module provides the functionality to store digital signature image for a record.		
+	""",
+
+	'js':[
+		  "static/lib/excanvas.js",
+		  "static/lib/jquery.signature.js",
+		  "static/src/js/digital_sign.js",
+	],
+	'css':[
+		"static/src/css/digital.css",
+		"static/src/css/jquery.signature.css",
+	],
+	'website': 'http://www.serpentcs.com',
+	'qweb': ['static/src/xml/digital_sign.xml'],
+	'installable': True,
+	'auto_install': False,
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
